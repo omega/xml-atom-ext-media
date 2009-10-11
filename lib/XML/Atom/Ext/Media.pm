@@ -79,3 +79,8 @@ A for the moment rather crude and simple module for handeling MRSS elements
 
 The L<ATTRIBUTES> we describe here end up on L<XML::Atom::Entry>-objects, except
 for L<element_ns>.
+
+=head1 ACKNOWLEDGEMENTS
+
+Thank you to L<XML::Atom::Ext::OpenSearch> for being invaluable aid in figuring out
+how to write extension for L<XML::Atom>. Thank you to MIYAGAWA for L<XML::Atom>.
