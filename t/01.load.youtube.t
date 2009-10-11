@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 use strict;
-use Test::More;
+use Test::More 0.92;
 use XML::Atom::Feed;
 use XML::Atom::Ext::Media;
 
@@ -34,7 +34,7 @@ my $feed = XML::Atom::Feed->new('t/feeds/atom_youtube.xml');
     my ($entry) = $feed->entries;
     my ($media) = $entry->media_groups;
     is($media->title, "First Slackline JumpOn");
-    
+    is($media->thumbnail->url, "http://i.ytimg.com/vi/7c5hyVc_jPk/2.jpg");
     my $content = $media->default_content;
     is($content->type, "application/x-shockwave-flash");
 }
