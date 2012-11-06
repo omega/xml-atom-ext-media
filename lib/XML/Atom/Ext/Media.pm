@@ -33,10 +33,14 @@ BEGIN {
         group => 'XML::Atom::Ext::Media::Group',
         'media_groups',
     );
-# XXX: This conflicts with <entry><content>, how to restrict to NS?
-#    XML::Atom::Entry->mk_object_list_accessor(
-#        content => 'XML::Atom::Ext::Media::Content'
-#    );
+
+    XML::Atom::Entry->mk_object_list_accessor(
+        media_content => 'XML::Atom::Ext::Media::Content'
+    );
+
+    XML::Atom::Entry->mk_object_list_accessor(
+        thumbnail => 'XML::Atom::Ext::Media::Thumbnail'
+    );
 }
 
 =attr element_ns
